@@ -1,0 +1,31 @@
+.education {
+  font-family: 'Montserrat', sans-serif;
+}
+.education h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.education h1:before {
+  content: '『 ';
+}
+
+.education h1:after {
+  content: ' 』';
+}
+
+.education h3,
+h5 {
+  color: rgb(41, 39, 39);
+  font-weight: bold;
+}
+
+.education h6 {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.education-date {
+  color: #34f14d;
+  font-weight: bold !important;
+}

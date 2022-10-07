@@ -1,13 +1,248 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(41, 39, 39);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 700%;
+}
+.nav-bar {
+  background-color: #34f14d;
+  color: rgb(41, 39, 39);
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  background-color: #34f14d;
+  height: 510px;
+  position: relative;
+}
+.heading {
+  display: flex;
+}
+.title-intro {
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 100px;
+  font-size: 50px;
+  padding-top: 120px;
+}
+.title-btn {
+  border-color: rgb(41, 39, 39);
+  background-color: #34f14d;
+  color: rgb(41, 39, 39);
+  margin-top: 70px;
+  animation-name: moveLeft;
+  animation-duration: 1.8s;
+  z-index: 1;
+}
+.title-btn:hover {
+  border-color: #34f14d;
+  background-color: rgb(41, 39, 39);
+  color: #34f14d;
+}
+.home-image {
+  height: 10vh;
+  z-index: 2;
+}
+.matrix-logo {
+  margin: 50px;
+  height: 50vh;
+  animation-name: moveRight;
+  animation-duration: 1.3s;
+  float: right;
+  position: absolute;
+  right: 100px;
+  display: block;
+}
+.title {
+  animation-name: moveLeft;
+  animation-duration: 0.7s;
+}
+.titleTwo {
+  animation-name: moveLeft;
+  animation-duration: 1s;
+}
+.titleThree {
+  animation-name: moveLeft;
+  animation-duration: 1.3s;
+  margin-bottom: 10px;
+}
+.text {
+  font-size: 35px;
+  font-weight: 700;
+  animation-name: moveLeft;
+  animation-duration: 1.3s;
+}
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translate(108px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translate(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(-20em);
+  }
+  to {
+    transform: translateY(0em);
+  }
+}
+@media screen and (max-width: 1920px) {
+  .title-intro {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin: 0 auto;
+    padding-left: 150px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .title-intro {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin: 0 auto;
+    padding-left: 40px;
+  }
+  .matrix-logo {
+    right: -20px;
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .matrix-logo {
+    right: -20px;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .matrix-logo {
+    right: -20px;
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .title-intro {
+    padding-left: 40px;
+    font-size: 48px;
+    padding-top: 70px;
+  }
+  .matrix-logo {
+    right: -40px;
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 758px) {
+  .title-intro {
+    padding-top: 90px;
+    font-size: 30px;
+    padding-left: 180px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title-intro {
+    padding-top: 90px;
+    font-size: 30px;
+    padding-left: 100px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .title-intro {
+    padding-top: 85px;
+    font-size: 30px;
+    padding-left: 80px;
+  }
+}
+header svg {
+  padding-top: 70px;
+  animation-name: moveDown;
+  animation-duration: 1.5s;
+  position: absolute;
+  left: 0;
+}
+main {
+  grid-area: main;
+  color: #34f14d;
+  position: absolute;
+  top: 120vh;
+  font-size: 30px;
+}
+.skills {
+  padding-top: 5%;
+  text-align: center;
+}
+.Skillbar {
+  padding-top: 5%;
+}
+.imagegrid-title {
+  padding-top: 5%;
+  text-align: center;
+}
+.service {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 60px;
+}
+.imagegrid {
+  margin-top: 50px;
+  border-radius: 20px;
+  background-color: #34f14d;
+  padding-top: 2px;
+  padding-bottom: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.imagegrid > h5 {
+  padding-top: 10px;
+  text-align: center;
+}
+footer {
+  grid-area: footer;
+  background-color: #34f14d;
 }

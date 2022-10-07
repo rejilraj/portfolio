@@ -1,0 +1,28 @@
+.about {
+  color: #34f14d;
+  border-radius: 50px;
+}
+
+.about h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.about p {
+  font-size: 25px;
+}
+
+.about h1 {
+  text-align: center;
+}
+
+.about-row {
+  padding: 4.5%;
+}
+
+.about-col {
+  padding: auto 10%;
+}
+.about-image {
+  width: 70%;
+}
